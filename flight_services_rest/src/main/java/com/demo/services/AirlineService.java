@@ -27,7 +27,7 @@ public class AirlineService {
 			return airline;
 		} else {
 			// throw exception
-			throw new RuntimeException("Book with id "+id+" is not found in database");
+			throw new RuntimeException("Airline with id "+id+" is not found in database");
 		}
 	}
 	public Airline saveAirline(Airline b) {

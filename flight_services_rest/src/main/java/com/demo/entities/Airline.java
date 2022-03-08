@@ -14,34 +14,34 @@ public class Airline {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(nullable = false) 
-	private String aName;
+	private String name;
 	@Column(nullable = false)
-	private String astatus;
+	private String status;
 	@Column(nullable = false) 
-	private String aDesc;
+	private String desc;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getaName() {
-		return aName;
+	public String getName() {
+		return name;
 	}
-	public void setaName(String aName) {
-		this.aName = aName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getAstatus() {
-		return astatus;
+	public String getStatus() {
+		return status;
 	}
-	public void setAstatus(String astatus) {
-		this.astatus = astatus;
+	public void setStatus(String status) {
+		this.status = status;
 	}
-	public String getaDesc() {
-		return aDesc;
+	public String getDesc() {
+		return desc;
 	}
-	public void setaDesc(String aDesc) {
-		this.aDesc = aDesc;
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 	
 	

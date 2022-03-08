@@ -14,52 +14,52 @@ public class Passenger {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@Column(nullable = false)
-	private String pName;
+	private String name;
 	@Column(nullable = false)
-	private String pEmail;
+	private String email;
 	@Column(nullable = false)
-	private String pGender;
+	private String gender;
 	@Column(nullable = false)
-	private double pAge;
+	private double age;
 	@Column(nullable = false)
-	private double pPhone;
+	private long phone;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getpName() {
-		return pName;
+	public void setPhone(long phone) {
+		this.phone = phone;
 	}
-	public void setpName(String pName) {
-		this.pName = pName;
+	public String getName() {
+		return name;
 	}
-	public String getpEmail() {
-		return pEmail;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public void setpEmail(String pEmail) {
-		this.pEmail = pEmail;
+	public String getEmail() {
+		return email;
 	}
-	public String getpGender() {
-		return pGender;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public void setpGender(String pGender) {
-		this.pGender = pGender;
+	public String getGender() {
+		return gender;
 	}
-	public double getpAge() {
-		return pAge;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public void setpAge(double pAge) {
-		this.pAge = pAge;
+	public double getAge() {
+		return age;
 	}
-	public double getpPhone() {
-		return pPhone;
+	public void setAge(double age) {
+		this.age = age;
 	}
-	public void setpPhone(double pPhone) {
-		this.pPhone = pPhone;
+	public long getPhone() {
+		return phone;
 	}
-
+	
 	
 
 	

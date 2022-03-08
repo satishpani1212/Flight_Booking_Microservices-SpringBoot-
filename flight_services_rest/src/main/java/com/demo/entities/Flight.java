@@ -17,6 +17,7 @@ public class Flight {
 	private String flightName;
 	@Column(nullable = false)
 	private String airline;
+	@Column(nullable = false)
 	private double rating ;
 	public int getFlightId() {
 		return flightId;

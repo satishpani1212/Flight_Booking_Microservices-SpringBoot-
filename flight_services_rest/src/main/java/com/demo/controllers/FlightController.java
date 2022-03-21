@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import com.demo.entities.Flight;
 import com.demo.services.FlightService;
 
 @RestController
+@CrossOrigin(value = "*")
 public class FlightController {
 	
 	@Autowired
@@ -30,6 +32,10 @@ public class FlightController {
 	@GetMapping("flights/{id}")
 	public Flight findById(@PathVariable int id) {
 		return flightService.findById(id);
+	}
+	@GetMapping("/searchflights")
+	public List<Flight> findByDestination(String from, String to) {
+		return flightService.findByDestination(from,to);
 	}
 	@PostMapping("/flights")
 	public ResponseEntity<?> saveFlight(@RequestBody Flight b) {

@@ -30,10 +30,11 @@ public class UserService {
 		}
 	}
 	public User saveUser(User b) {
+		
 		return userRepository.save(b);
 	}
 	public User updateUser(User b) {
-		if(userRepository.existsById(b.getUserId())) {
+		if(userRepository.existsById(b.getId())) {
 			return userRepository.save(b); // save if id not found, edit where id is found 
 		} else {
 			throw new RuntimeException("Invalid id, update operation failed");

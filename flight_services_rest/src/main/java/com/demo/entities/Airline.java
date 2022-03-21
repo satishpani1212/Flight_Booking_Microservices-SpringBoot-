@@ -1,6 +1,5 @@
 package com.demo.entities;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,12 +12,10 @@ public class Airline {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(nullable = false) 
+	@Column
 	private String name;
-	@Column(nullable = false)
+	@Column
 	private String status;
-	@Column(nullable = false) 
-	private String desc;
 	public int getId() {
 		return id;
 	}
@@ -37,12 +34,9 @@ public class Airline {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getDesc() {
-		return desc;
-	}
-	public void setDesc(String desc) {
-		this.desc = desc;
-	}
 	
 	
+	
+	
+
 }

@@ -12,32 +12,34 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
+	private int id;
 	@Column(nullable = false) 
-	private String userName;
+	private String name;
 	@Column(nullable = false)
-	private String userEmail;
+	private String email;
 	@Column(nullable = false)
 	private String password;
 	@Column(nullable = false)
-	private double age ;
-	public int getUserId() {
-		return userId;
+	private double age;
+	@Column(nullable = false) 
+	private String login_id;
+	public int getId() {
+		return id;
 	}
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getUserEmail() {
-		return userEmail;
+	public String getEmail() {
+		return email;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -51,6 +53,13 @@ public class User {
 	public void setAge(double age) {
 		this.age = age;
 	}
+	public String getLogin_id() {
+		return login_id;
+	}
+	public void setLogin_id(String login_id) {
+		this.login_id = login_id;
+	}
+	
 	
 	
 }

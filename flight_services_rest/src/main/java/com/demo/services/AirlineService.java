@@ -46,4 +46,7 @@ public class AirlineService {
 		airlineRepository.deleteById(id);
 		return isFound;
 	}
+	public String isBlocked(String airline) {
+	return  airlineRepository.isFound(airline);
+	}
 }
